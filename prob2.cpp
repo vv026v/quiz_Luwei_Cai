@@ -20,7 +20,7 @@ public:
         }
     }
 
-    // Optional: print heap (for debugging)
+    // for debugging
     void Print() {
         for (int x : heap) cout << x << " ";
         cout << endl;
