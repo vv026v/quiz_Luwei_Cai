@@ -7,7 +7,7 @@ public:
     vector<int> heap;
 
     // the same as prob2'code
-    void Add(int x) {
+    void Add(int x) { // choose to remove the top (biggest) one, and rearrange the heap
         heap.push_back(x);
         int i = heap.size() - 1;
 
@@ -20,8 +20,8 @@ public:
         }
     }
 
-    // new remove code
-    int Remove() {   // ← added method
+    // the new remove code
+    int Remove() {   
         if (heap.empty()) {   
             throw runtime_error("Heap is empty."); 
         }
@@ -68,10 +68,10 @@ int main() {
     h.Add(30);
     h.Add(2);
 
-    h.Print(); 
+    h.Print(); // the top is 30
 
-    cout << "Removed: " << h.Remove() << endl;  
-    h.Print();
+    cout << "Removed: " << h.Remove() << endl;  // get 30 removed
+    h.Print(); // the top is now 10
 
     return 0;
 }
